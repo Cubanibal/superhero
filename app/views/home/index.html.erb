@@ -1,2 +1,28 @@
-<h1>Página principal</h1>
-<p>Esto se eliminará pronto</p>
+
+<div class="card mb-3" style="max-width: 640px;">
+	<div class="card-header">
+    	<h4><%= link_to "Click para generar nuevo superhéroe", root_path %></h4>
+	</div>
+  	<div class="row g-0">
+	    <div class="col-md-4">
+	      <img src="<%= @avatar %>" class="img-fluid rounded-start" alt="...">
+	    </div>
+	    <div class="col-md-8">
+	      <div class="card-body">
+	        <h5 class="card-title"> Superhéroe</h5>
+	        <ul class="list-group list-group-flush">
+			    <li class="list-group-item"><span class="text-muted">Nombre: </span><%= @hero_name %></li>
+			    <li class="list-group-item"><span class="text-muted">Poder: </span><%= @hero_power %></li>
+			    <li class="list-group-item"><span class="text-muted">Título Corp: </span><%= @corp_title %></li>
+			    <li class="list-group-item"><span class="text-muted">Poder Corp: </span><%= @corp_power %></li>
+  			</ul>
+	        
+	      </div>
+	     	
+	    </div>
+	</div>
+  	<div class="card-footer text-muted">
+  		<%= link_to "Crear un equipo de superhéroes", home_team_path %>
+    </div>
+</div>
+

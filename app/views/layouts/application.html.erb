@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hero</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Superhero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <%= render 'home/navbar' %>
     <br/>
     <div class="container">
       <%= yield %>
