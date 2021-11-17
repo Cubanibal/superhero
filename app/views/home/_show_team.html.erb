@@ -1,0 +1,46 @@
+<% @team_number.times do %>
+	<div class="col-md-4">
+	    <% rand_number = rand(1..1000) %>
+	    <% set_number = rand(1..4) %>
+	    <% if set_number == 1 %>
+	      <% set = "set1" %>
+	    <% elsif set_number == 2 %>
+	     <% set = "set2"%>
+	    <%elsif set_number == 3 %>
+	     <% set = "set3" %>
+	   <% else %>
+	     <% set = "set4" %>
+	    <% end %>
+
+
+	    <% bgset_number = rand(1..2) %>
+	    <% if bgset_number == 1 %>
+	     	<% bgset = "bg1" %>
+	    <% else %>
+	    	<%  bgset = "bg2" %>
+	    <% end %>
+
+	    <% avatar = Faker::Avatar.image(slug: rand_number, size: "350x350", format: "png", set: set, bgset: bgset) %>
+        
+
+		      <img src='<%= avatar %>' class="img-fluid rounded-start" alt="...">
+		 </div>
+		    <div class="col-md-8">
+		      <div class="card-body">
+		        <h5 class="card-title"> Superhéroe</h5>
+		        <ul class="list-group list-group-flush">
+				    <li class="list-group-item"><span class="text-muted">Nombre: </span><span class="rojo"><%= Faker::Superhero.name %></span></li>
+				    <li class="list-group-item"><span class="text-muted">Poder: </span><span class="rojo"><%= Faker::Superhero.power %></span></li>
+				    <li class="list-group-item"><span class="text-muted">Título Corp: </span><span class="corp_rojo"><%= Faker::Job.title %></span></li>
+				    <li class="list-group-item"><span class="text-muted">Poder Corp: </span><span class="corp_rojo"><%= Faker::Company.bs %></span></li>
+	  			</ul>
+		        
+		      </div>
+		     	
+	</div>
+	<div class="row g-0">
+		<div class="col-md-12">
+			<hr>
+		</div>	
+    </div>
+<% end %>

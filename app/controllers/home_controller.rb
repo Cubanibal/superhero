@@ -36,5 +36,6 @@ class HomeController < ApplicationController
   end
 
   def team
+    @team_number = params[:team_number].to_i
   end
 end
