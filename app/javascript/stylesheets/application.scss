@@ -13,5 +13,12 @@ a:hover {
 a:active {
   text-decoration: underline;
 }
+.rojo{
+  color:red;
+}
+.corp_rojo{
+  color:red;
+  opacity: 0.5;
+}
 
 @import "bootstrap"
